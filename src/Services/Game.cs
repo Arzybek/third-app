@@ -79,5 +79,12 @@ namespace covidSim.Services
                 person.CalcNextStep();
             }
         }
+        
+        public void Restart()
+        {
+            Map = new CityMap();
+            People = CreatePopulation();
+            _lastUpdate = DateTime.Now;
+        }
     }
 }
